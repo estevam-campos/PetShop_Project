@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B20D2F60-C354-4AEB-90BA-450CF29B703F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PetShop</RootNamespace>
+    <AssemblyName>PetShop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcessoBD.cs" />
+    <Compile Include="Animal.cs" />
+    <Compile Include="Endereco.cs" />
+    <Compile Include="Especie.cs" />
+    <Compile Include="frmAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgendamento.Designer.cs">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnimal.Designer.cs">
+      <DependentUpon>frmAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEspecie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEspecie.Designer.cs">
+      <DependentUpon>frmEspecie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerico.Designer.cs">
+      <DependentUpon>frmGenerico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfissional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfissional.Designer.cs">
+      <DependentUpon>frmProfissional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProprietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProprietario.Designer.cs">
+      <DependentUpon>frmProprietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRaca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRaca.Designer.cs">
+      <DependentUpon>frmRaca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSexo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSexo.Designer.cs">
+      <DependentUpon>frmSexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSituacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSituacao.Designer.cs">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoTelefone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoTelefone.Designer.cs">
+      <DependentUpon>frmTipoTelefone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Historico.cs" />
+    <Compile Include="Medicamento.cs" />
+    <Compile Include="Profissional.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Proprietario.cs" />
+    <Compile Include="Raca.cs" />
+    <Compile Include="Sexo.cs" />
+    <Compile Include="Situacao.cs" />
+    <Compile Include="Telefone.cs" />
+    <Compile Include="TipoTelefone.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Vacina.cs" />
+    <Compile Include="Vermifugo.cs" />
+    <EmbeddedResource Include="frmAgendamento.resx">
+      <DependentUpon>frmAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnimal.resx">
+      <DependentUpon>frmAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEspecie.resx">
+      <DependentUpon>frmEspecie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerico.resx">
+      <DependentUpon>frmGenerico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfissional.resx">
+      <DependentUpon>frmProfissional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProprietario.resx">
+      <DependentUpon>frmProprietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRaca.resx">
+      <DependentUpon>frmRaca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSexo.resx">
+      <DependentUpon>frmSexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSituacao.resx">
+      <DependentUpon>frmSituacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoTelefone.resx">
+      <DependentUpon>frmTipoTelefone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FloppyDisks.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businesspeople.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businesswoman2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door2_open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notebook.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\raca.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\especie.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sexo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Code Black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\senac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medicamentos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vacina.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vermifugo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Historico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stockbroker3.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
